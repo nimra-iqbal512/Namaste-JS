@@ -1,55 +1,11 @@
-// ===========
-console.log(x); // undefined
-getNmae();      // Nimra
+// =========== call Stack
 var x = 7;
 function getNmae() {
-    console.log('Nimra');
+    console.log('Nimra');   //Apply debugger at this point to see call stack in 'Sources'
 }
 
-// // ===========
-// console.log(x); // Error: x is not defined
-// getNmae();
-// function getNmae() {
-//     console.log('Nimra');
-// }
+getNmae();
+console.log(x); //Here we'll see only global execution context in call stack
+console.log(getNmae);
 
-// // ===========
-// function getNmae() {
-//     console.log('Nimra');
-// }
-// console.log(getNmae);
-
-// // ===========
-// console.log(getNmae);
-// function getNmae() {
-//     console.log('Nimra');
-// }
-
-
-// // // =========== Arrow functions--> also behave like variables(contains undefined)
-// console.log(getName); //undefined
-
-// var getName = () => {
-//     console.log('Nimra');
-// }
-
-
-// // // ===========
-// console.log(getName); //undefined
-// console.log(getName2); //function code
-
-// var getName = () => {
-//     console.log('Nimra');
-// }
-
-// function getName2(){
-//     console.log('Nimra');
-// }
-
-
-// // // =========== (Also behave slike a variable)
-// console.log(getName); //undefined
-// var getName = function(){
-//     console.log('Nimra');
-// }
-// console.log(getName); 
+//Call stack becomes empty after last line of code being get executed.
